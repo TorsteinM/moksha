@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Personnel{% endblock %}
+
+{% block content %}
+<div id="person_list">
+    <h1>Personnel</h1>
+    <h4>Register Person:</h4>
+    {% include 'stub/_form.html' with form=form page='Moksha:person_create' %}
+
+    <h4>Registered Personnel</h4>
+    <ul>
+        {% for nameEntry in object_list %}
+        <li><a href="{% url 'Moksha:person_detail' nameEntry.pk %}">{{ nameEntry }}</a></li>
+        {% empty %}
+        <li>None registered.</li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

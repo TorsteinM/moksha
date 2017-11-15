@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--{% load static %}-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="title">
+        <title>{% block title %}The Title{% endblock %}</title>
+    </div>
+    <link rel="stylesheet" type="text/css" href="{% static 'Moksha/style.css' %}"/>
+</head>
+<body>
+    {% include "stub/_navbar.html" %}
+    <div id="main_content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

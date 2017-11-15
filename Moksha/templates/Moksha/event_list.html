@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div id="event_list">
+    <h1>Events</h1>
+    <div class="form">
+        <h4>Register Event:</h4>
+        {% include 'stub/_form.html' with form=event_form page='Moksha:create_event' %}
+    </div>
+    <div class="event_list">
+        <h4>Registered Events</h4>
+        <ul>
+            {% for nameEntry in object_list %}
+            <li><a href="{% url 'Moksha:event_detail' nameEntry.pk %}">{{ nameEntry }}</a></li>
+            {% empty %}
+            <li>No events are registered.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

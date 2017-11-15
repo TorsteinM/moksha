@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div id="event_list">
+    <h1>Register Event:</h1>
+    <div class="form">
+        {% include 'stub/_form.html' with form=form page='Moksha:create_event' %}
+    </div>
+</div>
+{% endblock %}

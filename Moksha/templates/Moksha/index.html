@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Moksha{% endblock %}
+
+{% block content %}
+<div id="index">
+    <h1>Moksha</h1>
+    <h4>Upcoming events:</h4>
+
+    <table id="index_table">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Hour</th>
+        </tr>
+        {% for item in object_list %}
+        <tr>
+            <td>{{ item.event_name }}</td>
+            <td>{{ item.event_start|date:"D d M" }}</td>
+            <td>{{ item.event_start|time:"H:i" }}</td>
+        </tr>
+        {% empty %}
+        <td>No events found.</td>
+        <td>-</td>
+        <td>-</td>
+        {% endfor %}
+    </table>
+    <div id="buttons">
+                <a href="{% url 'Moksha:event_list' %}" id="btn1">Events</a>
+                <a href="{% url 'Moksha:person_list' %}" id="btn2">Personnel</a>
+    </div>
+</div>
+{% endblock %}

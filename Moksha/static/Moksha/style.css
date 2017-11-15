@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', 'serif';
+    background-color: LightGray;
+
+}
+#main_content {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Times New Roman", Times, serif;
+}
+#main_content > div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.nav {
+    list-style: none;
+    text-align: center;
+    background-color: #595959;
+    color: #ffffff;
+    padding: 20px 0 20px 0;
+}
+.nav > li {
+    display: inline-block;
+    padding: 0 25px 0 25px;
+}
+.nav > li > a{
+    text-decoration: none;
+    color:  #ffffff;
+}
+.nav > li > a:hover{
+    color:  #c1c1c1;
+}
+
+#index_table {
+    margin: 3;
+}
+
+#index_table > th {
+    background-color: #4CAF50;
+    color: white;
+}
+#index_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#index_table td, #index_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#index_table tr:nth-child(even){background-color: #f2f2f2;}
+
+#index_table tr:hover {background-color: #ddd;}
+
+#index_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#buttons {
+  text-align: center;
+}
+#buttons a:link,#buttons a:visited{
+    background-color:#4CAF50;
+    padding:14px 25px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    border-radius: 5px;
+}
+#buttons a:hover,#buttons a:active{
+    background-color:#45a049;
+}
+
+
+div.buttons > a:visited, div.buttons > a:link{
+    padding:14px 47%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    border-radius: 5px;
+}
+input.btn.add{
+    background-color:#4CAF50;
+    }
+
+input.btn.edit{
+    background-color:orange;
+}
+input.btn.del{
+    background-color:red;
+}
+input.del{
+    background-color:red;
+}
+input.del:hover{
+    background-color:#b70000;
+}
+a.edit:link, a.edit:visited{
+    background-color:orange;
+}
+a.edit:active, a.edit:hover{
+    background-color: #da8d00;
+}

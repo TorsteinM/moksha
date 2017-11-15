@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div id="event_list">
+    <h1>Edit Event:</h1>
+    <div class="form">
+    <form class="card" method="post">
+    <div class="card-content">
+      {% csrf_token %}
+      {{ form.as_p }}
+    </div>
+    <div class="card-action">
+      <input class="btn edit" type="submit" value="UPDATE" />
+    </div>
+</div>
+{% endblock %}

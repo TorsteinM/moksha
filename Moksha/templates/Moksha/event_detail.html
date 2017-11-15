@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Event Detail{% endblock %}
+
+{% block content %}
+<div id="event_detail">
+    <h1>Event's Detail</h1>
+    <p><label for="id_event_name">Event name:</label> <input type="text" name="event_name" value={{ event.event_name }}
+                                                             }} required maxlength="30" id="id_event_name" readonly/></p>
+    <p><label for="id_event_start">Event start:</label> <input type="text" name="event_start"
+                                                               value="{{ event.event_start|date:" r" }}"
+        id="id_event_start" readonly/></p>
+    <p>
+        <details>
+            <summary><label for="id_attendants">Attendants:</label></summary>
+            <ul id="id_attendants">
+                {% for person in event.attendants.all %}
+                <li>{{ person }}</li>
+                {% endfor %}
+            </ul>
+        </details>
+    </p>
+    <div class="buttons">
+        <a class="edit" href="{% url 'Moksha:event_update' event.id %}">EDIT</a>
+        <form class="btn red" method="POST" action="{% url 'Moksha:event_delete' event.id %}">
+            {% csrf_token %}<input class="del" type="submit" value="DELETE">
+        </form>
+    </div>
+
+</div>
+{% endblock %}

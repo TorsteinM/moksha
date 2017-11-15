@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div id="person_update">
+    <h1>Edit Person:</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input class="btn edit" type="submit" value="UPDATE"/>
+    </form>
+</div>
+{% endblock %}
